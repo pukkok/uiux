@@ -28,14 +28,29 @@ const dummy1 = [
   {
     preset: 'radio',
     title: '배송 방법',
-    groupId: 'pickup',
-    defaultValue: 'company',
+    options: {
+      groupId: 'pickup',
+      defaultValue: 'company'
+    },
     groups: [
       { label:"문 앞 배송", value: 'door' },
       { label: '경비실 배송', value:"guard" },
       { label: '회사 배송', value:"company" },
     ]
-  }
+  },
+  {
+    preset: 'checkbox',
+    title: '여러가지 선택 가능',
+    options: {
+      useMultiple: true,
+      defaultValue: 'company',
+    },
+    groups: [
+      { label:"문 앞 배송", value: 'door' },
+      { label: '경비실 배송', value:"guard" },
+      { label: '회사 배송', value:"company" },
+    ]
+  },
 ]
 
 const App = () => {

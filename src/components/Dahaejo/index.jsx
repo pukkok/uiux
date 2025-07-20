@@ -1,3 +1,4 @@
+import CheckboxPreset from './preset/CheckboxPreset'
 import FieldPreset from './preset/FieldPreset'
 import RadioPreset from './preset/RadioPreset'
 
@@ -20,10 +21,19 @@ const Dahaejo = ({ works }) => {
           return (
             <RadioPreset 
               key={idx}
-              groupId={work.groupId}
               groupTitle={work.title}
               groups={work.groups}
-              defaultValue={work.defaultValue}
+              options={work.options}
+            />
+          )
+        }
+        if(work.preset === 'checkbox') {
+          return (
+            <CheckboxPreset 
+              key={idx}
+              groupTitle={work.title}
+              groups={work.groups}
+              options={work.options}
             />
           )
         }
