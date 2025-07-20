@@ -1,4 +1,3 @@
-import RadioButton from "./components/Custom/RadioGroup"
 import Dahaejo from "./components/DaHaejo"
 
 const dummy1 = [
@@ -11,7 +10,7 @@ const dummy1 = [
     },
     groups: [
       { label: '아이디', placeholder: '8자까지 입력' },
-      { label: '비밀번호', }
+      { label: '비밀번호', placeholder: 'xxxxxxxx'}
     ]
   },
   {
@@ -25,25 +24,18 @@ const dummy1 = [
       { label: '연락처' },
       { label: '주소' }
     ]
+  },
+  {
+    preset: 'radio',
+    title: '배송 방법',
+    groupId: 'pickup',
+    defaultValue: 'company',
+    groups: [
+      { label:"문 앞 배송", value: 'door' },
+      { label: '경비실 배송', value:"guard" },
+      { label: '회사 배송', value:"company" },
+    ]
   }
-]
-
-const useLabelDummys = [
-  { label: '카드번호', placeholder: '000-0000-0000-000' },
-  { label: '유효기간', type: 'date' },
-  { label: 'CVC', type: 'number' },
-  { label: '카드 소유자 이름' },
-  { type: 'number', placeholder: '김치'},
-  { label: '선택A', type: 'radio', name:'select'},
-  { label: '선택B', type: 'radio', name:'select'},
-  // { label: '선택A', type: 'checkbox'},
-  // { label: '선택B', type: 'checkbox'},
-]
-
-const radioGroups = [
-  { label: '여자', type: 'radio', name: 'gender'},
-  { label: '남자', type: 'radio', name: 'gender'},
-  { label: '중성', type: 'radio', name: 'gender'},
 ]
 
 const App = () => {
