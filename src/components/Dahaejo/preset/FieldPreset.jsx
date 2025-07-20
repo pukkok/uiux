@@ -1,16 +1,16 @@
-import HaejoLabel from "./HaejoLabel"
+import LabelMolecule from "@/components/LabelMolecule"
 
-const HaejoFieldset = ({groupTitle, groups=[], options={}}) => {
+const FieldPreset = ({groupTitle, groups=[], options={}}) => {
 
   return (
     <fieldset className="border border-gray-300 p-3 rounded-md mb-4">
       <legend className="font-semibold text-sm px-1">{groupTitle}</legend>
 
-      {groups.map((group, idx) => {
+      {groups.map((item, idx) => {
         return (
-          <HaejoLabel 
-            key={group.id || idx} 
-            group={group}
+          <LabelMolecule 
+            key={item.id || idx} 
+            item={item}
             separator={options?.separator || ""}
             labelPosition={options?.labelPosition || 'forward'}
           />
@@ -20,4 +20,4 @@ const HaejoFieldset = ({groupTitle, groups=[], options={}}) => {
   )
 }
 
-export default HaejoFieldset
+export default FieldPreset
